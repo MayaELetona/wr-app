@@ -1,20 +1,42 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import Itinerary from './components/itinerary';
+import Home from './components/home';
+import MyProfile from './components/myProfile';
+import Calendar from './components/calendar';
+import styles from './style';
+import View from 'react-native';
 
-export default function App() {
+const App = () => {
+  
+  const [page, setPage] = React.useState('Itinerary')
+  const screenChoose = (screen) => {
+    setPage(screen)
+  };
+
+  const screenRender = () => {
+      if (page == 'Itinerary') {
+        return <Itinerary/>
+      }
+      else if (page == 'Home') {
+        return <Home/>
+      }
+      else if (page == 'MyProfile') {
+        return <MyProfile/>
+      }
+
+      else if (page == 'Calendar') {
+        return <Calendar/>
+      }
+    }
+
   return (
     <View style={styles.container}>
-      <Text>Lets get dressed and get coff?</Text>
-      <StatusBar style="auto" />
+      <View style={styles.appContent}>
+        {screenRender()}
+      </View>
     </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    
+  )}
+export default App;
+
