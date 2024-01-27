@@ -1,10 +1,12 @@
 import React from 'react';
-import View from 'react-native';
+import {View, Text} from 'react-native';
 
-const Itinerary = ({screenChoose}) => {
+const Itinerary = () => {
     return (
         <View>
-            <text>Hello</text>
+            <Text>Hello</Text>
         </View>
-    )}
+    );
+};
+
 export default Itinerary;

@@ -1,10 +1,11 @@
 import React from 'react';
+import {View} from 'react-native';
 import Itinerary from './components/itinerary';
 import Home from './components/home';
 import MyProfile from './components/myProfile';
 import Calendar from './components/calendar';
 import styles from './style';
-import View from 'react-native';
+
 
 const App = () => {
   
@@ -32,6 +33,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <View style={styles.appContent}>
+        <Itinerary/>
         {screenRender()}
       </View>
     </View>
