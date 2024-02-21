@@ -1,6 +1,6 @@
 import React, {useState}  from 'react';
 import {View, Text, TouchableOpacity, Switch,} from 'react-native';
-import styles from '../../style';
+import styles from '../style';
 
 
 const ActivitiesBox = () => {
