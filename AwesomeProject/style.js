@@ -1,6 +1,7 @@
 import {StyleSheet} from 'react-native'
 
 const styles = StyleSheet.create({
+    //HOME PAGE STYLES
     container: { 
         flex: 1, 
         backgroundColor: 'darkgray',
@@ -37,6 +38,7 @@ const styles = StyleSheet.create({
         marginTop: 20,
         fontSize: 25,
     },
+    //ACTIVITIES BOX STYLES
     activityBox: {
         marginTop: 15,
         height: 100,
@@ -59,6 +61,27 @@ const styles = StyleSheet.create({
         height: 30,
         margin: 5,
     },
-
+    //PROFILE STYLES
+    profileLogo: {
+        width: 66,
+        height: 58,
+        alignItems: 'center',
+    },
+    profileGenHeader: {
+        width: '100%',
+        flexDirection: 'row',
+        justifyContent: 'center',
+    },
+    pageModule: {
+        marginTop: 15,
+        height: '20%',
+        width: '100%',
+        borderWidth: 3,
+        borderColor: 'black',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    //MYPROFILE PAGE
+    
 })
 export default styles;
