@@ -9,7 +9,7 @@ import styles from './style';
 
 const App = () => {
   
-  const [page, setPage] = React.useState('Home')
+  const [page, setPage] = React.useState('MyProfile')
   const screenChoose = (screen) => {
     setPage(screen)
   };

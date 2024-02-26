@@ -1,6 +1,13 @@
 import {StyleSheet} from 'react-native'
 
 const styles = StyleSheet.create({
+    h1: {
+        fontSize: 30,
+    },
+    h2: {
+        fontSize: 20,
+    },
+   
     //HOME PAGE STYLES
     container: { 
         flex: 1, 
@@ -82,6 +89,27 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     //MYPROFILE PAGE
-    
+    myProfileHeader: {
+        flexDirection: 'column',
+        alignItems: 'center',
+        
+    },
+    profileHeaderFont: {
+        fontSize: 30,
+    },
+    profileBox: {
+        marginTop: 20,
+        flexDirection: 'column',
+    },
+    input: {
+        height: 40,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+    },
+    titleInputBox: {
+        width: '100%',
+        flexDirection: 'row',
+    },
 })
 export default styles;
