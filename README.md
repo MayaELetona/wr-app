@@ -12,7 +12,7 @@ Student athletes, club team athletes and professional athletes struggle to maint
 ## User Population:
 Wrestling student athletes and coaches within clubs or teams who struggle with a streamline form of curriculum communication and communication. 
 
-##Design 
+## Design 
 The current design has three screen tabs. 
 
 
