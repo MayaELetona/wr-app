@@ -9,14 +9,11 @@ const styles = StyleSheet.create({
     },
    
     //HOME PAGE STYLES
-    container: { 
-        flex: 1, 
-        backgroundColor: 'darkgray',
-    },
+
     appContent: {
-		marginTop: 81,
-		marginLeft: 30,
-		marginRight: 30,
+		marginTop: 60,
+		marginLeft: 15,
+		marginRight: 15,
 		flex: 1,
 	},
     header: {
