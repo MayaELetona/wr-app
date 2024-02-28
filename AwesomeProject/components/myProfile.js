@@ -3,9 +3,13 @@ import {View, Text, SafeAreaView, TextInput, Switch,} from 'react-native';
 import styles from '../style';
 import DropdownComponent from './dropDown';
 const MyProfile = () => {
-    const [text, onChangeText] = React.useState('Enter Weight');
-    const [isEnabled, setIsEnabled] = useState(false);
-    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+    const [WeightClasstext, WConChangeText] = React.useState('Enter Weight');
+    const [WeightClassisEnabled, WCsetIsEnabled] = useState(false);
+    const WeightClasstoggleSwitch = () => WCsetIsEnabled(previousState => !previousState);
+
+    const [CurrentClasstext, onChangeText] = React.useState('Enter Weight');
+    const [CurrentClassisEnabled, setIsEnabled] = useState(false);
+    const CurrentClasstoggleSwitch = () => setIsEnabled(previousState => !previousState);
 
     return (
         <View>
@@ -19,8 +23,8 @@ const MyProfile = () => {
                     <SafeAreaView style={{flex: 5}}>
                         <TextInput
                             style={styles.input}
-                            onChangeText={onChangeText}
-                            value={text}
+                            onChangeText={WConChangeText}
+                            value={WeightClasstext}
                         />   
                     </SafeAreaView>  
                     <View style={{alignContent: 'center', alignItems: 'center', flex: 1}}> 
@@ -28,10 +32,10 @@ const MyProfile = () => {
                                 <Switch
                                     style={styles.toggle}
                                     trackColor={{false: '#767577', true: '#81b0ff'}}
-                                    thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
+                                    thumbColor={WeightClassisEnabled ? '#f5dd4b' : '#f4f3f4'}
                                     ios_backgroundColor="#3e3e3e"
-                                    onValueChange={toggleSwitch}
-                                    value={isEnabled}
+                                    onValueChange={WeightClasstoggleSwitch}
+                                    value={WeightClassisEnabled}
                                 />
                     </View> 
                 </View>
@@ -42,7 +46,7 @@ const MyProfile = () => {
                         <TextInput
                             style={styles.input}
                             onChangeText={onChangeText}
-                            value={text}
+                            value={CurrentClasstext}
                         />   
                     </SafeAreaView>  
                     <View style={{alignContent: 'center', alignItems: 'center', flex: 1}}> 
@@ -50,10 +54,10 @@ const MyProfile = () => {
                                 <Switch
                                     style={styles.toggle}
                                     trackColor={{false: '#767577', true: '#81b0ff'}}
-                                    thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
+                                    thumbColor={CurrentClassisEnabled ? '#f5dd4b' : '#f4f3f4'}
                                     ios_backgroundColor="#3e3e3e"
-                                    onValueChange={toggleSwitch}
-                                    value={isEnabled}
+                                    onValueChange={CurrentClasstoggleSwitch}
+                                    value={CurrentClassisEnabled}
                                 />
                     </View> 
                 </View>

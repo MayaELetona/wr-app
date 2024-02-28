@@ -73,6 +73,16 @@ export default function MyComponent() {
         }}
       />
       <Tab.Screen
+        name="Dashboard"
+        component={DashboardScreen}
+        options={{
+          tabBarLabel: 'Dashboard',
+          tabBarIcon: ({ color, size }) => {
+            return <Icon name="view-dashboard" size={size} color={color} />;
+          },
+        }}
+      />
+      <Tab.Screen
         name="Profile"
         component={ProfileScreen}
         options={{
@@ -82,7 +92,6 @@ export default function MyComponent() {
           },
         }}
       />
-      
     </Tab.Navigator>
   );
 }
@@ -95,10 +104,17 @@ function HomeScreen() {
   );
 }
 
-function ProfileScreen() {
+function DashboardScreen() {
   return (
     <View>
       <ProfileGen/>
+    </View>
+  );
+}
+function ProfileScreen() {
+  return (
+    <View>
+      <MyProfile/>
     </View>
   );
 }
@@ -108,5 +124,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    
   },
 });
