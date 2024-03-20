@@ -9,7 +9,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import ProfileGen from './profileGen';
 import Home from './home';
 import MyProfile from './myProfile';
-import Calendar from './calendar';
+import MyCalendar from './myCalendar';
 
 const Tab = createBottomTabNavigator();
 
@@ -92,6 +92,16 @@ export default function MyComponent() {
           },
         }}
       />
+      <Tab.Screen
+        name="Calendar"
+        component={CalendarScreen}
+        options={{
+          tabBarLabel: 'Calendar',
+          tabBarIcon: ({ color, size }) => {
+            return <Icon name="calendar" size={size} color={color} />;
+          },
+        }}
+      />
     </Tab.Navigator>
   );
 }
@@ -118,7 +128,13 @@ function ProfileScreen() {
     </View>
   );
 }
-
+function CalendarScreen() {
+  return (
+    <View>
+      <MyCalendar/>
+    </View>
+  );
+}
 const styles = StyleSheet.create({
   container: {
     flex: 1,
